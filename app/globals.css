@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Kanit, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body {
+  transition:all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+html {
+  font-size: 14px;
+  letter-spacing: -0.2px;
+}
+
+main{
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+hr.solid{
+  border-top: 1px;
+  margin: 2rem auto;
+  border-color: black;
+}
+
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+.hero a {
+  color: rgb(0, 102, 255);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:0;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 150%;
+  font-size: 1.75rem;
+  margin:0;
+  color: #222;
+}
+
+/* other globals(intro-paragraph */
+.intro-paragraph {
+  display:flex;
+  padding:2rem;
+  margin:0 auto;
+}
+
+.intro-paragraph p{
+  font-weight: 300;
+  line-height: normal;
+  font-size: 1.5rem;
+}
+
+ /* navbar styling */
+.nav h1{
+  font-size: 3.25rem;
+  font-weight: 400;
+}
+
+.nav{
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin:0 auto;
+  font-size: 36px;
+}
+
+.nav ul{
+  padding: 0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav a{
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  font-weight: 300;
+
+}
+
+.nav li.active{
+  text-decoration: underline;
+}
+
+button{
+  display:none;
+}
+
+/* footer styling */
+.footer{
+  background-color: white;
+  color: black;
+  display: block;
+  padding: 2rem;
+  margin:0 auto;
+}
+
+.footer-content{
+  max-width: 50%;
+  background: white;
+}
+
+.footer h3{
+  font-weight:300;
+  color:#444;
+  margin-bottom:1rem;
+}
+
+.footer-copyright{
+  margin-top: 1rem;;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color:#444;
+}
+
+.icon:hover{
+  transform: translateY(-2px);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Home Page */
+.hero {
+  display:flex;
+  padding:2rem;
+  margin:0 auto;
+  max-width: fit-content;
+}
+
+.hero-content{
+  max-width:55%;
+}
+
+.hero-img{
+  max-width: 45%;
+}
+
+.hero-img img{
+  
+}
+
+/* Project Block */
+.project-block{
+  display: block;
+  width: 100%;
+  padding:0 2rem;
+  margin:0 auto;
+  
+}
+
+.project-block h2{
+  color: rgb(0, 102, 255);
+}
+
+.project-block p{
+  font-size: 1.5rem;
+}
+
+/* Blog post */
+.blog-post{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding:0 2rem;
+  margin:0 auto;
+}
+
+.blog-post h2{
+  color: rgb(0, 102, 255);
+}
+
+@media screen and (max-width:1050px){
+  html {
+    font-size: 13px;
+    letter-spacing: -0.2px;
+  }
+}
+
+
+
+@media screen and (max-width:850px){
+  html {
+    font-size: 12.5px;
+    letter-spacing: -0.2px;
+  }
+  .footer{
+    padding: 1rem 2rem;
+  }
+
+
+  .hero {
+    display:block;
+    padding: 1rem;
+    margin:0 auto;
+  }
+  
+  .hero-content{
+    max-width:100%;
+  }
+}
+
+
+
+@media screen and (max-width:680px){
+
+  html {
+    font-size: 12px;
+    letter-spacing: -0.2px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  body{
+    min-width: 320px;
+  }
+
+  /* header styling */
+
+  .nav{
+    font-size: 32px;
+    align-items: center;
+    position:relative;
+  }
+
+  .nav a{
+    font-size: 1rem;
+  }
+
+  .nav ul{
+    display: none;
+  }
+  
+  .site-nav.show {
+   display: flex;
+   position: fixed; 
+   top: 0; 
+   right: 0; 
+   height: 100%; 
+   width: 100%; 
+   background-color: white; 
+   overflow: auto; 
+   flex-direction: column; 
+   padding:2rem;
+   font-size: 32px;
+  }
+
+  .site-nav.show a{
+    font-size: 4rem;
+  }
+
+
+  button{
+    padding:none;
+    align-items: baseline;
+    }
+
+  .open-btn{
+    display: block;
+    border: none;
+    background:none;
+    padding:none;
+  }
+  /* footer */
+  .footer{
+    padding: 1rem 2rem;
+  }
+
+  .footer-content{
+    max-width: 100%;
+  }
+  
+/* hero */
+  .hero {
+    display:block;
+    padding: 1rem;
+    margin:0 auto;
+  }
+  
+  .hero-content{
+    max-width:100%;
+  }
+
+  .intro-paragraph {
+    padding:1rem;
+    margin:0 auto;
+  }
+
+}
+
+
